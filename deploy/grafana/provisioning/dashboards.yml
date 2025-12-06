@@ -1,0 +1,41 @@
+# Grafana Dashboard Provisioning Configuration
+# Automatically loads dashboards for Devlar AI Workforce monitoring
+
+apiVersion: 1
+
+providers:
+  - name: 'devlar-workforce-dashboards'
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards
+
+  - name: 'workforce-overview'
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 30
+    options:
+      path: /var/lib/grafana/dashboards/workforce-overview.json
+
+  - name: 'pod-performance'
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 30
+    options:
+      path: /var/lib/grafana/dashboards/pod-performance.json
+
+  - name: 'cost-monitoring'
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 30
+    options:
+      path: /var/lib/grafana/dashboards/cost-monitoring.json
+
+  - name: 'system-health'
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 30
+    options:
+      path: /var/lib/grafana/dashboards/system-health.json

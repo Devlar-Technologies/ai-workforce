@@ -1,0 +1,208 @@
+# Devlar AI Workforce - Prometheus Alert Rules
+# Alert definitions for workforce monitoring and incident response
+
+groups:
+  - name: workforce-health
+    interval: 30s
+    rules:
+      # Workforce application health
+      - alert: WorkforceDown
+        expr: up{job="devlar-workforce"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          service: workforce
+        annotations:
+          summary: "Devlar AI Workforce is down"
+          description: "The Devlar AI Workforce application has been down for more than 2 minutes."
+
+      - alert: WorkforceHighLatency
+        expr: workforce_execution_duration_seconds{quantile="0.95"} > 300
+        for: 5m
+        labels:
+          severity: warning
+          service: workforce
+        annotations:
+          summary: "High execution latency detected"
+          description: "95th percentile execution time is {{ $value }}s, above 300s threshold."
+
+      # Pod performance alerts
+      - alert: PodExecutionFailureRate
+        expr: rate(workforce_pod_executions_failed_total[5m]) > 0.1
+        for: 3m
+        labels:
+          severity: warning
+          service: "{{ $labels.pod_name }}"
+        annotations:
+          summary: "High failure rate in {{ $labels.pod_name }}"
+          description: "Pod {{ $labels.pod_name }} has failure rate of {{ $value | humanizePercentage }}"
+
+      - alert: PodQueueBacklog
+        expr: workforce_pod_queue_size > 50
+        for: 5m
+        labels:
+          severity: warning
+          service: "{{ $labels.pod_name }}"
+        annotations:
+          summary: "Large queue backlog in {{ $labels.pod_name }}"
+          description: "Pod {{ $labels.pod_name }} has {{ $value }} tasks queued"
+
+  - name: cost-monitoring
+    interval: 60s
+    rules:
+      # Cost monitoring alerts
+      - alert: HighDailyCost
+        expr: workforce_daily_cost_usd > 100
+        for: 0s
+        labels:
+          severity: warning
+          category: cost
+        annotations:
+          summary: "Daily cost exceeds budget"
+          description: "Daily spend is ${{ $value }}, above $100 budget threshold."
+
+      - alert: APIUsageSpike
+        expr: rate(workforce_api_requests_total[5m]) > 100
+        for: 2m
+        labels:
+          severity: warning
+          category: cost
+        annotations:
+          summary: "High API usage detected"
+          description: "API request rate is {{ $value }} req/sec, above normal levels."
+
+      - alert: CriticalCostAlert
+        expr: workforce_daily_cost_usd > 200
+        for: 0s
+        labels:
+          severity: critical
+          category: cost
+        annotations:
+          summary: "CRITICAL: Daily cost exceeds emergency threshold"
+          description: "Daily spend is ${{ $value }}, above $200 emergency threshold. Immediate action required."
+
+  - name: external-dependencies
+    interval: 60s
+    rules:
+      # External API health
+      - alert: AnthropicAPIDown
+        expr: workforce_external_api_health{service="anthropic"} == 0
+        for: 3m
+        labels:
+          severity: critical
+          category: external
+        annotations:
+          summary: "Anthropic API unavailable"
+          description: "Anthropic API has been unavailable for 3+ minutes"
+
+      - alert: PineconeMemoryIssues
+        expr: workforce_external_api_health{service="pinecone"} == 0
+        for: 5m
+        labels:
+          severity: warning
+          category: external
+        annotations:
+          summary: "Pinecone memory service issues"
+          description: "Pinecone service has been unavailable, memory operations may be degraded"
+
+      - alert: HighExternalAPILatency
+        expr: workforce_external_api_latency_seconds{quantile="0.95"} > 30
+        for: 5m
+        labels:
+          severity: warning
+          category: external
+        annotations:
+          summary: "High external API latency"
+          description: "{{ $labels.service }} API latency is {{ $value }}s (95th percentile)"
+
+  - name: system-resources
+    interval: 30s
+    rules:
+      # System resource alerts
+      - alert: HighMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+          category: resources
+        annotations:
+          summary: "High memory usage"
+          description: "Memory usage is above 85% ({{ $value }}%)"
+
+      - alert: HighCPUUsage
+        expr: 100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+          category: resources
+        annotations:
+          summary: "High CPU usage"
+          description: "CPU usage is above 80% ({{ $value }}%)"
+
+      - alert: DiskSpaceLow
+        expr: (node_filesystem_avail_bytes / node_filesystem_size_bytes) * 100 < 15
+        for: 5m
+        labels:
+          severity: critical
+          category: resources
+        annotations:
+          summary: "Disk space critically low"
+          description: "Disk space on {{ $labels.mountpoint }} is below 15% ({{ $value }}% available)"
+
+  - name: telegram-bot
+    interval: 30s
+    rules:
+      # Telegram bot health
+      - alert: TelegramBotDown
+        expr: up{job="telegram-bot"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          service: telegram-bot
+        annotations:
+          summary: "Telegram bot is down"
+          description: "Telegram bot has been unavailable for 2+ minutes"
+
+      - alert: HighTelegramErrorRate
+        expr: rate(telegram_bot_errors_total[5m]) > 0.1
+        for: 3m
+        labels:
+          severity: warning
+          service: telegram-bot
+        annotations:
+          summary: "High Telegram bot error rate"
+          description: "Telegram bot error rate is {{ $value | humanizePercentage }}"
+
+  - name: user-experience
+    interval: 60s
+    rules:
+      # User experience alerts
+      - alert: LowExecutionSuccessRate
+        expr: (rate(workforce_executions_successful_total[1h]) / rate(workforce_executions_total[1h])) < 0.9
+        for: 10m
+        labels:
+          severity: warning
+          category: user-experience
+        annotations:
+          summary: "Low execution success rate"
+          description: "Success rate over last hour is {{ $value | humanizePercentage }}, below 90% threshold"
+
+      - alert: SlowExecutionTimes
+        expr: histogram_quantile(0.90, rate(workforce_execution_duration_seconds_bucket[1h])) > 600
+        for: 10m
+        labels:
+          severity: warning
+          category: user-experience
+        annotations:
+          summary: "Slow execution times detected"
+          description: "90th percentile execution time is {{ $value }}s over the last hour"
+
+      - alert: HighUserChurn
+        expr: rate(workforce_user_sessions_ended_total[1h]) / rate(workforce_user_sessions_started_total[1h]) > 0.5
+        for: 15m
+        labels:
+          severity: warning
+          category: user-experience
+        annotations:
+          summary: "High user churn rate"
+          description: "User session churn rate is {{ $value | humanizePercentage }} over the last hour"

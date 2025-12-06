@@ -1,0 +1,183 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Devlar AI Workforce - Pod Performance",
+    "tags": ["devlar", "workforce", "pods", "performance"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Pod Execution Rate",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "rate(workforce_pod_executions_total[5m])",
+            "legendFormat": "{{pod_name}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "execps",
+            "color": {"mode": "palette-classic"}
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0}
+      },
+      {
+        "id": 2,
+        "title": "Pod Queue Sizes",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "workforce_pod_queue_size",
+            "legendFormat": "{{pod_name}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "short",
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 20},
+                {"color": "red", "value": 50}
+              ]
+            }
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0}
+      },
+      {
+        "id": 3,
+        "title": "Pod Execution Duration (95th percentile)",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, rate(workforce_pod_execution_duration_seconds_bucket[5m]))",
+            "legendFormat": "{{pod_name}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s",
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 60},
+                {"color": "red", "value": 300}
+              ]
+            }
+          }
+        },
+        "gridPos": {"h": 8, "w": 24, "x": 0, "y": 8}
+      },
+      {
+        "id": 4,
+        "title": "Pod Success Rate (1h)",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "(rate(workforce_executions_successful_total[1h]) / rate(workforce_executions_total[1h])) * 100",
+            "legendFormat": "{{pod_name}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "thresholds": {
+              "steps": [
+                {"color": "red", "value": null},
+                {"color": "yellow", "value": 85},
+                {"color": "green", "value": 95}
+              ]
+            }
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 16},
+        "transformations": [
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {},
+              "indexByName": {},
+              "renameByName": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Agent Execution Breakdown",
+        "type": "piechart",
+        "targets": [
+          {
+            "expr": "workforce_pod_executions_total",
+            "legendFormat": "{{pod_name}}.{{agent_name}}",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "pieType": "pie",
+          "reduceOptions": {
+            "calcs": ["lastNotNull"],
+            "fields": "",
+            "values": false
+          },
+          "legend": {
+            "displayMode": "table",
+            "placement": "right",
+            "values": ["value", "percent"]
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 16}
+      },
+      {
+        "id": 6,
+        "title": "Execution Errors by Pod",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "rate(workforce_executions_failed_total[5m])",
+            "legendFormat": "{{pod_name}} - {{error_type}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "errps",
+            "color": {"mode": "palette-classic"}
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 24}
+      },
+      {
+        "id": 7,
+        "title": "Pod Memory Usage",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "workforce_memory_usage_bytes",
+            "legendFormat": "Memory Usage",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "bytes",
+            "color": {"fixedColor": "blue", "mode": "fixed"}
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 24}
+      }
+    ],
+    "time": {
+      "from": "now-3h",
+      "to": "now"
+    },
+    "refresh": "10s"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Devlar AI Workforce - Cost Monitoring",
+    "tags": ["devlar", "workforce", "cost", "budget"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Daily Cost Progress",
+        "type": "gauge",
+        "targets": [
+          {
+            "expr": "workforce_daily_cost_usd",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "currencyUSD",
+            "min": 0,
+            "max": 200,
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 50},
+                {"color": "orange", "value": 100},
+                {"color": "red", "value": 150}
+              ]
+            }
+          }
+        },
+        "gridPos": {"h": 8, "w": 8, "x": 0, "y": 0}
+      },
+      {
+        "id": 2,
+        "title": "Cost Trend (7 days)",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "workforce_daily_cost_usd",
+            "legendFormat": "Daily Cost",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "currencyUSD",
+            "color": {"fixedColor": "green", "mode": "fixed"}
+          }
+        },
+        "gridPos": {"h": 8, "w": 16, "x": 8, "y": 0}
+      },
+      {
+        "id": 3,
+        "title": "API Request Rate by Service",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "rate(workforce_api_requests_total[5m])",
+            "legendFormat": "{{service}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "reqps",
+            "color": {"mode": "palette-classic"}
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8}
+      },
+      {
+        "id": 4,
+        "title": "API Cost Breakdown",
+        "type": "piechart",
+        "targets": [
+          {
+            "expr": "increase(workforce_api_requests_total[24h])",
+            "legendFormat": "{{service}}",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "pieType": "donut",
+          "reduceOptions": {
+            "calcs": ["lastNotNull"]
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8}
+      },
+      {
+        "id": 5,
+        "title": "Budget Alerts",
+        "type": "table",
+        "targets": [
+          {
+            "expr": "ALERTS{alertname=~\".*Cost.*\"}",
+            "format": "table",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "displayMode": "color-background",
+              "filterable": true
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "alertstate"},
+              "properties": [
+                {
+                  "id": "mappings",
+                  "value": [
+                    {
+                      "options": {
+                        "firing": {"color": "red", "index": 0},
+                        "pending": {"color": "yellow", "index": 1},
+                        "inactive": {"color": "green", "index": 2}
+                      },
+                      "type": "value"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {"h": 8, "w": 24, "x": 0, "y": 16}
+      },
+      {
+        "id": 6,
+        "title": "External API Latency",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, rate(workforce_external_api_latency_seconds_bucket[5m]))",
+            "legendFormat": "{{service}} (95th)",
+            "refId": "A"
+          },
+          {
+            "expr": "histogram_quantile(0.50, rate(workforce_external_api_latency_seconds_bucket[5m]))",
+            "legendFormat": "{{service}} (50th)",
+            "refId": "B"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s",
+            "color": {"mode": "palette-classic"}
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 24}
+      },
+      {
+        "id": 7,
+        "title": "Monthly Cost Projection",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "workforce_daily_cost_usd * 30",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "currencyUSD",
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 1500},
+                {"color": "red", "value": 3000}
+              ]
+            }
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 24}
+      }
+    ],
+    "time": {
+      "from": "now-7d",
+      "to": "now"
+    },
+    "refresh": "1m"
+  }
+}
