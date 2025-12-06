@@ -5,7 +5,9 @@
       "Bash(git checkout:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "WebFetch(domain:www.devlar.io)"
+      "WebFetch(domain:www.devlar.io)",
+      "Bash(gh repo create:*)",
+      "Bash(gh repo delete:*)"
     ],
     "deny": [],
     "ask": []
