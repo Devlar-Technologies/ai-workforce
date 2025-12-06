@@ -10,7 +10,8 @@
       "Bash(gh repo delete:*)",
       "Bash(git remote set-url:*)",
       "Bash(git push:*)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(chmod:*)"
     ],
     "deny": [],
     "ask": []
