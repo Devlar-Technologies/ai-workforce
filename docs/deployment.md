@@ -6,10 +6,10 @@ Comprehensive deployment options for Devlar AI Workforce across different enviro
 
 The Devlar AI Workforce supports multiple deployment strategies:
 
-- **Local Development** - Docker Compose for testing and development
-- **Modal.com** - Serverless deployment for production workloads
-- **Docker** - Containerized deployment for any cloud provider
-- **Kubernetes** - Scalable orchestrated deployment
+- **Modal.com (Recommended)** - Serverless AI-optimized platform
+- **Local Development** - Docker Compose for testing
+- **Docker** - Containerized deployment for any cloud
+- **Free Tier** - Deploy on free services for small scale
 
 ## Prerequisites
 
@@ -18,36 +18,30 @@ The Devlar AI Workforce supports multiple deployment strategies:
 Create a `.env` file in the project root:
 
 ```bash
-# AI Models
-ANTHROPIC_API_KEY=your_anthropic_key_here
-OPENAI_API_KEY=your_openai_key_here
-XAI_API_KEY=your_xai_grok_key_here
+# Core LLMs (Required)
+OPENAI_API_KEY=your_openai_key
+ANTHROPIC_API_KEY=your_anthropic_key
 
 # Vector Memory
-PINECONE_API_KEY=your_pinecone_key_here
-PINECONE_ENVIRONMENT=your_pinecone_env_here
+PINECONE_API_KEY=your_pinecone_key
 
-# External APIs
-FIRECRAWL_API_KEY=your_firecrawl_key_here
-APOLLO_API_KEY=your_apollo_key_here
-INSTANTLY_API_KEY=your_instantly_key_here
-FAL_KEY=your_flux_api_key_here
-GITHUB_TOKEN=your_github_token_here
+# Tools
+GITHUB_TOKEN=your_github_token
+APOLLO_API_KEY=your_apollo_key
+FIRECRAWL_API_KEY=your_firecrawl_key
+INSTANTLY_API_KEY=your_instantly_key
+REPLICATE_API_TOKEN=your_replicate_token
 
-# Notifications
-TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
-TELEGRAM_CHAT_ID=your_telegram_chat_id_here
-TELEGRAM_AUTHORIZED_USERS=user_id1,user_id2
-
-# Database (for Docker deployment)
-POSTGRES_PASSWORD=secure_database_password
+# Interfaces
+TELEGRAM_BOT_TOKEN=your_telegram_token
 
 # Security
-WEBHOOK_TOKEN=secure_webhook_token_here
-JWT_SECRET=your_jwt_secret_here
+WEBHOOK_TOKEN=secure_random_string
 
-# Monitoring (optional)
-GRAFANA_PASSWORD=grafana_admin_password
+# Monitoring (Optional)
+ENABLE_METRICS=true
+PROMETHEUS_PORT=9090
+GRAFANA_PASSWORD=admin_password
 ```
 
 ### API Key Setup

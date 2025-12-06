@@ -4,9 +4,9 @@ Get your Devlar AI Workforce up and running in under 15 minutes.
 
 ## Prerequisites
 
-- Python 3.9+
+- Python 3.11+
 - Git
-- API keys for required services (see [Environment Setup](#environment-setup))
+- API keys for required services (see setup guide below)
 
 ## 🚀 Installation
 
@@ -14,140 +14,141 @@ Get your Devlar AI Workforce up and running in under 15 minutes.
 
 ```bash
 # Clone the repository
-git clone https://github.com/alanomeara1/devlar-ai-workforce.git
-cd devlar-ai-workforce
-
-# Run the one-click setup script
-chmod +x setup.sh
-./setup.sh
-```
-
-Or manual installation:
-
-```bash
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+git clone https://github.com/alanomeara1/devlar-agents.git
+cd devlar-agents
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Environment Setup
+### 2. Quick Test (Local)
 
 ```bash
-# Copy environment template
-cp .env.example .env
-
-# Edit with your API keys
-nano .env  # or your preferred editor
+# Run example execution locally
+python examples/execute_goal.py
 ```
+
+This will run in simulation mode to test the system without API keys.
+
+## 🌐 Production Deployment
+
+### 1. Modal.com Setup
+
+```bash
+# Install Modal CLI
+pip install modal
+
+# Create account and login
+modal token new
+
+# Deploy the workforce
+modal deploy deploy/modal_deploy.py
+```
+
+### 2. Configure API Keys
 
 **Required API Keys:**
 ```bash
-# Primary LLM (Grok-4)
-XAI_API_KEY=xai-your-api-key-here
+# Core LLMs
+OPENAI_API_KEY=your_openai_key
+ANTHROPIC_API_KEY=your_anthropic_key
 
 # Memory system
-PINECONE_API_KEY=your-pinecone-api-key-here
+PINECONE_API_KEY=your_pinecone_key
 
-# Research tools
-FIRECRAWL_API_KEY=fc-your-firecrawl-key-here
+# Tools
+GITHUB_TOKEN=your_github_token
+APOLLO_API_KEY=your_apollo_key
+FIRECRAWL_API_KEY=your_firecrawl_key
+INSTANTLY_API_KEY=your_instantly_key
+REPLICATE_API_TOKEN=your_replicate_token
 
-# Telegram interface
-TELEGRAM_BOT_TOKEN=your-telegram-bot-token-here
+# Interfaces
+TELEGRAM_BOT_TOKEN=your_telegram_token
 ```
 
 ### 3. Test Installation
 
 ```bash
 # Quick system test
-python -c "from main import DevlarCEO; print('✅ Installation successful')"
+python examples/execute_goal.py
 ```
 
 ## 🎯 First Execution
 
-### Option A: Telegram Bot (Recommended)
-
-1. **Start the bot:**
-```bash
-python interfaces/telegram_bot.py
-```
-
-2. **Send a message to your bot:**
-```
-/task Get 100 new Chromentum beta users this week
-```
-
-### Option B: Command Line
+### Option A: Direct Execution (Easiest)
 
 ```bash
 # Execute a goal directly
-python main.py --goal "Research top 10 AI meditation apps for Zeneural"
+python -c "from main import execute_goal; print(execute_goal('Research AI automation trends'))"
 ```
 
-### Option C: Streamlit Interface
+### Option B: Example Script
 
 ```bash
-# Start web interface
-streamlit run interfaces/streamlit_app.py
+# Run interactive examples
+python examples/execute_goal.py
 ```
 
-Navigate to `http://localhost:8501` and enter your goal.
+### Option C: Production (Modal.com)
+
+```bash
+# Test on Modal after deployment
+modal run deploy/modal_deploy.py::test_execution
+```
 
 ## 📋 Example Goals
 
 Try these example goals to see the system in action:
 
-### 1. **User Acquisition**
+### 1. **Market Research**
 ```
-Get 100 new Chromentum beta users this week
+Research top 5 AI automation tools in 2024
 ```
-**Expected Output:** Market research → lead generation → outreach campaigns
+**Expected Output:** Research Pod → Comprehensive market analysis with competitor insights
 
-### 2. **Product Research**
+### 2. **Product Development**
 ```
-Research top 10 AI meditation apps and find gaps for Zeneural
+Design user onboarding flow for SaaS platform
 ```
-**Expected Output:** Competitive analysis → market gaps → feature recommendations
+**Expected Output:** Product Pod → User journey mapping, wireframes, technical specs
 
-### 3. **Feature Development**
+### 3. **Marketing Campaign**
 ```
-Ship a new 'AI affirmation generator' feature for Zeneural
+Create content strategy for Q1 2024 product launch
 ```
-**Expected Output:** Feature specification → code implementation → testing → deployment
+**Expected Output:** Marketing Pod → Content calendar, blog posts, social strategy
 
-### 4. **Marketing Campaign**
+### 4. **Sales Strategy**
 ```
-Optimize preorder campaign for PreOrder to drive early sales
+Generate 50 qualified leads for enterprise software
 ```
-**Expected Output:** Campaign analysis → optimization recommendations → implementation
+**Expected Output:** Sales Pod → Lead lists, outreach sequences, qualification criteria
 
-### 5. **AI Framework Development**
+### 5. **Customer Success**
 ```
-Build prototype AI agent using AimStack for Elephant Desktop
+Improve user retention with better onboarding experience
 ```
-**Expected Output:** Technical specification → prototype development → integration testing
+**Expected Output:** Customer Success Pod → Retention analysis, onboarding optimization
 
 ## 🔍 Understanding Results
 
 ### Execution Flow
-1. **CEO Analysis** - Goal breakdown and pod assignment
-2. **Pod Execution** - Specialized agents work in parallel waves
-3. **Quality Control** - Results validation and verification
-4. **Report Generation** - Comprehensive output with assets
+1. **CEO Orchestrator** - Goal decomposition and pod selection
+2. **Wave Execution** - Specialist pods execute in dependency order
+3. **Quality Control** - GREEN/YELLOW/RED verdicts with auto-retry
+4. **Memory Storage** - Experience saved for future learning
 
 ### Result Format
 ```
 📊 Execution Results:
-├── Status: Completed ✅
-├── Execution Time: 23 minutes
-├── Pods Involved: Research, Marketing, Sales
-├── Report: reports/exec_12345/
-│   ├── executive_summary.md
-│   ├── detailed_report.pdf
-│   └── assets.zip
-└── Next Actions: [Recommended follow-ups]
+├── Status: Completed ✅ (GREEN verdict)
+├── Execution Time: 2.3 minutes
+├── Cost: $8.50
+├── Pods Used: Research → Marketing → Sales
+├── Result: Comprehensive strategy document
+├── Learning: Stored in vector memory for future use
+└── Verdict: GREEN (High quality, no retry needed)
 ```
 
 ## 🛠️ Basic Configuration
