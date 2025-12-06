@@ -1,0 +1,220 @@
+# Devlar AI Workforce - Task Templates
+# Hierarchical task definitions for each specialist pod
+
+# ===== CEO ORCHESTRATOR TASKS =====
+ceo_tasks:
+  strategic_planning:
+    description: "Break down high-level business objectives into actionable tasks for specialist pods"
+    expected_output: "Detailed task delegation plan with resource allocation and success metrics"
+    context: "Devlar's product portfolio, market position, and strategic objectives"
+
+  resource_allocation:
+    description: "Optimize resource allocation across pods based on business priorities and ROI"
+    expected_output: "Resource allocation matrix with budget and timeline recommendations"
+
+  performance_monitoring:
+    description: "Monitor pod performance and adjust strategies based on results"
+    expected_output: "Performance dashboard with KPIs and optimization recommendations"
+
+# ===== RESEARCH POD TASKS =====
+research_tasks:
+  market_analysis:
+    description: "Conduct comprehensive market research for {product} in {market_segment}"
+    expected_output: "Market analysis report with opportunities, threats, and strategic recommendations"
+    tools: ["firecrawl_research", "apollo_prospecting", "serp_analysis"]
+    context: |
+      Research the {market_segment} market focusing on:
+      - Market size and growth trends
+      - Key players and their positioning
+      - Pricing strategies and business models
+      - User pain points and unmet needs
+      - Technology trends and innovations
+
+  competitor_deep_dive:
+    description: "Analyze top 10 competitors in {product_category} and identify differentiation opportunities"
+    expected_output: "Competitive analysis matrix with feature gaps and positioning opportunities"
+    tools: ["firecrawl_research", "github_analysis", "app_store_scraping"]
+
+  user_research:
+    description: "Research target user personas and their workflows for {product}"
+    expected_output: "User persona profiles with pain points and feature requirements"
+
+# ===== PRODUCT DEVELOPMENT POD TASKS =====
+product_dev_tasks:
+  feature_ideation:
+    description: "Generate innovative feature ideas for {product} based on research insights"
+    expected_output: "Prioritized feature roadmap with technical feasibility assessment"
+    context: "Market research findings, user feedback, and technical constraints"
+
+  technical_implementation:
+    description: "Develop {feature} for {product} following Devlar's technical standards"
+    expected_output: "Production-ready code with tests and documentation"
+    tools: ["github_management", "code_generation", "automated_testing"]
+
+  quality_assurance:
+    description: "Test {feature} across browsers and devices to ensure quality standards"
+    expected_output: "QA report with test results and deployment approval"
+
+  deployment_automation:
+    description: "Deploy {feature} to production with proper monitoring and rollback capabilities"
+    expected_output: "Successful deployment with monitoring dashboard"
+    tools: ["vercel_deployment", "infrastructure_monitoring"]
+
+# ===== MARKETING POD TASKS =====
+marketing_tasks:
+  content_strategy:
+    description: "Research and plan content strategy for {product} launch on {channels}"
+    expected_output: "Content calendar with platform-specific strategies"
+    tools: ["firecrawl_research", "social_media_analysis", "trend_analysis"]
+
+  copy_creation:
+    description: "Write compelling copy for {product} targeting {audience} on {platform}"
+    expected_output: "Platform-optimized copy with A/B test variants"
+    tools: ["content_generation", "seo_optimization"]
+
+  visual_design:
+    description: "Create visual assets for {campaign} including graphics, mockups, and promotional materials"
+    expected_output: "Professional visual asset package ready for publication"
+    tools: ["flux_image_generation", "design_automation"]
+
+  seo_optimization:
+    description: "Optimize {content} for SEO targeting {keywords} in {market}"
+    expected_output: "SEO-optimized content with keyword integration and meta tags"
+
+  campaign_launch:
+    description: "Execute {campaign} across {channels} with optimal timing and targeting"
+    expected_output: "Live campaign with tracking and performance metrics"
+    tools: ["social_publishing", "community_management", "launch_coordination"]
+
+# ===== SALES OUTREACH POD TASKS =====
+sales_tasks:
+  lead_generation:
+    description: "Find {lead_count} qualified prospects for {product} in {industry}"
+    expected_output: "Qualified lead list with contact information and company insights"
+    tools: ["apollo_prospecting", "lead_qualification", "company_research"]
+
+  sequence_creation:
+    description: "Create personalized email sequence for {product} targeting {persona}"
+    expected_output: "Email sequence with personalization templates and follow-up cadence"
+    tools: ["email_personalization", "sequence_automation"]
+
+  outreach_execution:
+    description: "Execute outreach campaign to {lead_list} with {sequence}"
+    expected_output: "Campaign performance report with engagement metrics"
+    tools: ["instantly_automation", "deliverability_monitoring", "engagement_tracking"]
+
+# ===== CUSTOMER SUCCESS POD TASKS =====
+customer_success_tasks:
+  feedback_analysis:
+    description: "Analyze customer feedback for {product} and identify improvement opportunities"
+    expected_output: "Feedback analysis report with prioritized improvement recommendations"
+    tools: ["feedback_analysis", "sentiment_analysis"]
+
+  churn_prediction:
+    description: "Identify customers at risk of churning and recommend retention strategies"
+    expected_output: "Churn risk assessment with personalized retention recommendations"
+    tools: ["churn_analysis", "usage_analytics", "predictive_modeling"]
+
+  winback_campaign:
+    description: "Design and execute winback campaign for churned {product} customers"
+    expected_output: "Winback campaign with personalized messaging and success metrics"
+    tools: ["winback_campaigns", "personalization", "lifecycle_marketing"]
+
+# ===== ANALYTICS POD TASKS =====
+analytics_tasks:
+  performance_analysis:
+    description: "Analyze {product} performance across {metrics} for {time_period}"
+    expected_output: "Performance analysis dashboard with insights and recommendations"
+    tools: ["data_analysis", "visualization"]
+
+  user_behavior_study:
+    description: "Study user behavior patterns for {feature} to optimize user experience"
+    expected_output: "User behavior report with UX optimization recommendations"
+
+  roi_calculation:
+    description: "Calculate ROI for {campaign} or {feature} and provide optimization recommendations"
+    expected_output: "ROI analysis with cost-benefit breakdown and optimization strategies"
+
+  executive_reporting:
+    description: "Create executive report for {time_period} covering key business metrics"
+    expected_output: "Executive dashboard with KPIs, trends, and strategic recommendations"
+    tools: ["report_generation", "data_visualization", "executive_communication"]
+
+# ===== WORKFLOW TEMPLATES =====
+workflow_templates:
+  product_launch:
+    sequence:
+      - research_pod: "market_analysis"
+      - research_pod: "competitor_deep_dive"
+      - product_dev_pod: "feature_ideation"
+      - marketing_pod: "content_strategy"
+      - product_dev_pod: "technical_implementation"
+      - product_dev_pod: "quality_assurance"
+      - marketing_pod: "campaign_launch"
+      - sales_outreach_pod: "lead_generation"
+      - product_dev_pod: "deployment_automation"
+      - analytics_pod: "performance_analysis"
+
+  user_acquisition:
+    sequence:
+      - research_pod: "user_research"
+      - marketing_pod: "content_strategy"
+      - sales_outreach_pod: "lead_generation"
+      - marketing_pod: "copy_creation"
+      - marketing_pod: "visual_design"
+      - sales_outreach_pod: "sequence_creation"
+      - marketing_pod: "campaign_launch"
+      - sales_outreach_pod: "outreach_execution"
+      - analytics_pod: "performance_analysis"
+
+  customer_retention:
+    sequence:
+      - customer_success_pod: "feedback_analysis"
+      - customer_success_pod: "churn_prediction"
+      - product_dev_pod: "feature_ideation"
+      - customer_success_pod: "winback_campaign"
+      - analytics_pod: "roi_calculation"
+
+# ===== EXAMPLE TASK CONFIGURATIONS =====
+example_goals:
+  chromentum_beta_users:
+    goal: "Get 100 new Chromentum beta users this week"
+    workflow: "user_acquisition"
+    parameters:
+      product: "Chromentum"
+      lead_count: 500
+      channels: ["Product Hunt", "Reddit", "Chrome Web Store", "LinkedIn"]
+      audience: "productivity-focused professionals"
+      market_segment: "browser productivity extensions"
+
+  zeneural_research:
+    goal: "Research top 10 AI meditation apps and find gaps for Zeneural"
+    workflow: "product_launch"
+    parameters:
+      product: "Zeneural"
+      market_segment: "AI meditation and wellness apps"
+      competitors: ["Headspace", "Calm", "Insight Timer", "Ten Percent Happier"]
+
+  affirmation_feature:
+    goal: "Ship a new 'AI affirmation generator' feature for Zeneural"
+    workflow: "product_launch"
+    parameters:
+      product: "Zeneural"
+      feature: "AI Affirmation Generator"
+      timeline: "2 weeks"
+
+  preorder_optimization:
+    goal: "Optimize preorder campaign for PreOrder to drive early sales"
+    workflow: "user_acquisition"
+    parameters:
+      product: "PreOrder"
+      campaign_type: "preorder_optimization"
+      target_audience: "e-commerce store owners"
+
+  aimstack_prototype:
+    goal: "Build prototype AI agent using AimStack for Elephant Desktop workspace automation"
+    workflow: "product_launch"
+    parameters:
+      product: "AimStack"
+      feature: "Workspace Automation Agent"
+      integration_target: "Elephant Desktop"

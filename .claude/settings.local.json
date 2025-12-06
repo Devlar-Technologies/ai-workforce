@@ -7,7 +7,10 @@
       "Bash(git commit:*)",
       "WebFetch(domain:www.devlar.io)",
       "Bash(gh repo create:*)",
-      "Bash(gh repo delete:*)"
+      "Bash(gh repo delete:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:github.com)"
     ],
     "deny": [],
     "ask": []
