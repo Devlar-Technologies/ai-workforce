@@ -1,8 +1,12 @@
-# Devlar Agents 🤖
+# Devlar AI Workforce
 
-> **AI-first agentic workforce for intelligent software development**
+> **Hierarchical AI workforce for business automation** - Scale your startup with autonomous AI agents
 
-Devlar Agents is a comprehensive agentic workforce system designed for [Devlar Technologies](https://www.devlar.io/)'s AI-first approach to software development. This system provides specialized AI agents that can collaborate to handle complex development workflows, from initial architecture design to deployment and maintenance.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Modal.com](https://img.shields.io/badge/deploy-modal.com-green.svg)](https://modal.com)
+
+**Transform high-level business goals into autonomous execution with 6 specialist AI pods, wave-based coordination, and free-tier deployment.**
 
 ## 🌟 Features
 
