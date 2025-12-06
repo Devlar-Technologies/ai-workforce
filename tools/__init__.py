@@ -5,7 +5,7 @@ API tools for external services and integrations
 
 from .firecrawl_tool import FirecrawlResearchTool
 from .apollo_tool import ApolloProspectingTool
-from .instantly_tool import InstantlyOutreachTool
+from .instantly_tool import InstantlyEmailTool
 from .flux_tool import FluxImageGenerationTool
 from .github_tool import GitHubManagementTool
 from .vercel_tool import VercelDeploymentTool
@@ -15,7 +15,7 @@ from .telegram_tool import TelegramNotificationTool
 __all__ = [
     "FirecrawlResearchTool",
     "ApolloProspectingTool",
-    "InstantlyOutreachTool",
+    "InstantlyEmailTool",
     "FluxImageGenerationTool",
     "GitHubManagementTool",
     "VercelDeploymentTool",
