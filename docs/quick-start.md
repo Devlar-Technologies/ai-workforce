@@ -14,8 +14,8 @@ Get your Devlar AI Workforce up and running in under 15 minutes.
 
 ```bash
 # Clone the repository
-git clone https://github.com/alanomeara1/devlar-agents.git
-cd devlar-agents
+git clone https://github.com/alanomeara1/ai-workforce.git
+cd ai-workforce
 
 # Install dependencies
 pip install -r requirements.txt

@@ -407,8 +407,8 @@ When you outgrow free tiers, prioritize upgrades:
 3. **Deploy**
    ```bash
    # Quick start with free tier
-   git clone https://github.com/alanomeara1/devlar-agents.git
-   cd devlar-agents
+   git clone https://github.com/alanomeara1/ai-workforce.git
+   cd ai-workforce
    cp .env.example .env
    # Edit .env with your keys
    python deploy/modal_deploy_free.py

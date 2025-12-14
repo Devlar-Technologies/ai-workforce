@@ -63,8 +63,8 @@ GRAFANA_PASSWORD=admin_password
 
 ```bash
 # Clone and setup
-git clone https://github.com/alanomeara1/devlar-agents.git
-cd devlar-agents
+git clone https://github.com/alanomeara1/ai-workforce.git
+cd ai-workforce
 
 # Setup environment
 cp .env.example .env
