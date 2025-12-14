@@ -1,4 +1,4 @@
-# Devlar AI Workforce - Production Dependencies (Dec 2025)
+# AI Workforce - Production Dependencies (Dec 2025)
 
 # Core CrewAI Framework
 crewai==0.70.1

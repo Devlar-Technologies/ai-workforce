@@ -177,7 +177,7 @@ Start with these proven goal types:
 "Analyze customer feedback from last quarter"
 
 # Marketing & Content
-"Create content calendar for Q1 2024"
+"Create content calendar for Q1 2026"
 "Develop social media strategy for product launch"
 
 # Sales & Business Development

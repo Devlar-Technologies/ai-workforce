@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Devlar AI Workforce - Example Goal Execution Script
+AI Workforce - Example Goal Execution Script
 Demonstrates how to use the workforce to execute various business goals
 """
 
@@ -12,7 +12,7 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from main import DevlarWorkforceCEO
+from main import WorkforceCEO
 from utils import setup_logging
 
 
@@ -22,7 +22,7 @@ def example_research_goal():
     print("🔍 RESEARCH GOAL EXAMPLE")
     print("="*60)
 
-    ceo = DevlarWorkforceCEO()
+    ceo = WorkforceCEO()
 
     result = ceo.execute_goal(
         goal="Research top 10 AI-powered productivity tools and analyze their pricing strategies, target markets, and key features",
@@ -51,7 +51,7 @@ def example_user_acquisition_goal():
     print("🚀 USER ACQUISITION GOAL EXAMPLE")
     print("="*60)
 
-    ceo = DevlarWorkforceCEO()
+    ceo = WorkforceCEO()
 
     result = ceo.execute_goal(
         goal="Create a campaign to acquire 100 beta users for Chromentum Chrome extension",
@@ -82,7 +82,7 @@ def example_product_development_goal():
     print("💻 PRODUCT DEVELOPMENT GOAL EXAMPLE")
     print("="*60)
 
-    ceo = DevlarWorkforceCEO()
+    ceo = WorkforceCEO()
 
     result = ceo.execute_goal(
         goal="Design and implement a dark mode feature for TimePost dashboard with user preference persistence",
@@ -117,7 +117,7 @@ def example_sales_outreach_goal():
     print("💼 SALES OUTREACH GOAL EXAMPLE")
     print("="*60)
 
-    ceo = DevlarWorkforceCEO()
+    ceo = WorkforceCEO()
 
     result = ceo.execute_goal(
         goal="Find 50 qualified B2B leads for AimStack ML platform and create personalized outreach sequences",
@@ -150,7 +150,7 @@ def example_content_marketing_goal():
     print("📝 CONTENT MARKETING GOAL EXAMPLE")
     print("="*60)
 
-    ceo = DevlarWorkforceCEO()
+    ceo = WorkforceCEO()
 
     result = ceo.execute_goal(
         goal="Create a 30-day content calendar for Zeneural meditation app blog with SEO-optimized topics",
@@ -181,7 +181,7 @@ def example_customer_success_goal():
     print("🎯 CUSTOMER SUCCESS GOAL EXAMPLE")
     print("="*60)
 
-    ceo = DevlarWorkforceCEO()
+    ceo = WorkforceCEO()
 
     result = ceo.execute_goal(
         goal="Design an onboarding flow for new Chromentum users to reach their first 'aha moment' within 3 minutes",
@@ -212,7 +212,7 @@ def example_analytics_goal():
     print("📊 ANALYTICS & OPTIMIZATION GOAL EXAMPLE")
     print("="*60)
 
-    ceo = DevlarWorkforceCEO()
+    ceo = WorkforceCEO()
 
     result = ceo.execute_goal(
         goal="Analyze TimePost user behavior data and identify top 3 features to optimize for retention",
@@ -244,7 +244,7 @@ def example_analytics_goal():
 def run_all_examples():
     """Run all example goal executions"""
     print("\n" + "="*80)
-    print("🤖 DEVLAR AI WORKFORCE - EXAMPLE GOAL EXECUTIONS")
+    print("🤖 AI WORKFORCE - EXAMPLE GOAL EXECUTIONS")
     print("="*80)
     print("\nThis demo will execute various business goals using the AI workforce.")
     print("Each goal demonstrates different pod capabilities and use cases.")

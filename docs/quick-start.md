@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Get your Devlar AI Workforce up and running in under 15 minutes.
+Get your AI Workforce up and running in under 15 minutes.
 
 ## Prerequisites
 
@@ -103,7 +103,7 @@ Try these example goals to see the system in action:
 
 ### 1. **Market Research**
 ```
-Research top 5 AI automation tools in 2024
+Research top 5 AI automation tools in 2025
 ```
 **Expected Output:** Research Pod → Comprehensive market analysis with competitor insights
 
@@ -115,7 +115,7 @@ Design user onboarding flow for SaaS platform
 
 ### 3. **Marketing Campaign**
 ```
-Create content strategy for Q1 2024 product launch
+Create content strategy for Q1 2026 product launch
 ```
 **Expected Output:** Marketing Pod → Content calendar, blog posts, social strategy
 

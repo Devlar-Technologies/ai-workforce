@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ai-workforce"
 version = "0.1.0"
-description = "AI-first agentic workforce for Devlar Technologies"
+description = "Production-ready autonomous AI workforce with 6 specialist pods for business automation"
 authors = [
     {name = "Devlar Technologies", email = "info@devlar.io"}
 ]

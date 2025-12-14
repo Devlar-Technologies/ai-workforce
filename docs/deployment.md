@@ -1,10 +1,10 @@
 # Deployment Guide
 
-Comprehensive deployment options for Devlar AI Workforce across different environments and platforms.
+Comprehensive deployment options for AI Workforce across different environments and platforms.
 
 ## Overview
 
-The Devlar AI Workforce supports multiple deployment strategies:
+AI Workforce supports multiple deployment strategies:
 
 - **Modal.com (Recommended)** - Serverless AI-optimized platform
 - **Local Development** - Docker Compose for testing

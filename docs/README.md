@@ -1,6 +1,6 @@
-# Devlar AI Workforce Documentation
+# AI Workforce Documentation
 
-This directory contains comprehensive documentation for the Devlar AI Workforce system.
+This directory contains comprehensive documentation for the AI Workforce system - an autonomous AI platform that deploys 6 specialist pods to execute business goals.
 
 ## Documentation Structure
 
@@ -61,9 +61,9 @@ This directory contains comprehensive documentation for the Devlar AI Workforce 
 
 ## Getting Help
 
-- **Issues**: Report bugs and feature requests on [GitHub Issues](https://github.com/alanomeara1/devlar-ai-workforce/issues)
-- **Discussions**: Join the conversation on [GitHub Discussions](https://github.com/alanomeara1/devlar-ai-workforce/discussions)
-- **Email**: Contact the team at [workforce@devlar.io](mailto:workforce@devlar.io)
+- **Issues**: Report bugs and feature requests on [GitHub Issues](https://github.com/alanomeara1/ai-workforce/issues)
+- **Discussions**: Join the conversation on [GitHub Discussions](https://github.com/alanomeara1/ai-workforce/discussions)
+- **Support**: See [devlar.io/support](https://www.devlar.io/support) for product support
 
 ## License
 
@@ -71,4 +71,4 @@ This project is licensed under the MIT License - see the [LICENSE](../LICENSE) f
 
 ---
 
-**Built with ❤️ by the Devlar Technologies team**
+**AI Workforce** - A product by [Devlar Technologies](https://www.devlar.io)
