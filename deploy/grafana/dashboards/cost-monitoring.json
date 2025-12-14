@@ -11,13 +11,13 @@
         "type": "gauge",
         "targets": [
           {
-            "expr": "workforce_daily_cost_usd",
+            "expr": "workforce_daily_cost_eur",
             "refId": "A"
           }
         ],
         "fieldConfig": {
           "defaults": {
-            "unit": "currencyUSD",
+            "unit": "currencyEUR",
             "min": 0,
             "max": 200,
             "thresholds": {
@@ -38,14 +38,14 @@
         "type": "timeseries",
         "targets": [
           {
-            "expr": "workforce_daily_cost_usd",
+            "expr": "workforce_daily_cost_eur",
             "legendFormat": "Daily Cost",
             "refId": "A"
           }
         ],
         "fieldConfig": {
           "defaults": {
-            "unit": "currencyUSD",
+            "unit": "currencyEUR",
             "color": {"fixedColor": "green", "mode": "fixed"}
           }
         },
@@ -160,13 +160,13 @@
         "type": "stat",
         "targets": [
           {
-            "expr": "workforce_daily_cost_usd * 30",
+            "expr": "workforce_daily_cost_eur * 30",
             "refId": "A"
           }
         ],
         "fieldConfig": {
           "defaults": {
-            "unit": "currencyUSD",
+            "unit": "currencyEUR",
             "thresholds": {
               "steps": [
                 {"color": "green", "value": null},

@@ -230,9 +230,9 @@ TELEGRAM_BOT_TOKEN=optional
 ### System Configuration
 ```python
 # Budget controls (main.py)
-MAX_BUDGET = 50.0
-APPROVAL_THRESHOLD = 50.0
-DAILY_BUDGET_LIMIT = 200.0
+MAX_BUDGET = 45.0  # EUR per goal
+APPROVAL_THRESHOLD = 45.0  # EUR human approval threshold
+DAILY_BUDGET_LIMIT = 180.0  # EUR daily limit
 
 # Quality thresholds (pod agents)
 MIN_QUALITY_SCORE = 80

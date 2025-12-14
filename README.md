@@ -182,9 +182,9 @@ TELEGRAM_BOT_TOKEN=your_token
 ### Budget Controls
 ```python
 # Adjust in main.py
-MAX_BUDGET = 50.0  # Per-goal limit
-APPROVAL_THRESHOLD = 50.0  # Human approval required
-DAILY_BUDGET_LIMIT = 200.0  # Daily spending cap
+MAX_BUDGET = 45.0  # Per-goal limit (EUR)
+APPROVAL_THRESHOLD = 45.0  # Human approval required (EUR)
+DAILY_BUDGET_LIMIT = 180.0  # Daily spending cap (EUR)
 ```
 
 ## 📚 Documentation

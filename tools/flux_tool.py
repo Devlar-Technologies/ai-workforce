@@ -386,5 +386,5 @@ Modern UI design with good typography and spacing.
             "total_cost": total_cost,
             "quality": quality,
             "aspect_ratio": aspect_ratio,
-            "currency": "USD"
+            "currency": "EUR"
         }

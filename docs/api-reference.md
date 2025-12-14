@@ -47,7 +47,7 @@ POST /api/execute
 |-----------|------|----------|-------------|
 | `goal` | string | Yes | Business goal to execute |
 | `priority` | string | No | Execution priority (high/medium/low) |
-| `budget_limit` | number | No | Budget limit in USD |
+| `budget_limit` | number | No | Budget limit in EUR |
 | `auto_approve` | boolean | No | Auto-approve operations under threshold |
 | `context` | object | No | Additional execution context |
 

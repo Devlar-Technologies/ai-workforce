@@ -109,9 +109,9 @@ python tests/run_tests.py --all
 Configure in `main.py`:
 ```python
 # Adjust budget limits
-MAX_BUDGET = 50.0  # Maximum spend per goal
-APPROVAL_THRESHOLD = 50.0  # Human approval required above this amount
-DAILY_BUDGET_LIMIT = 200.0  # Daily spending limit
+MAX_BUDGET = 45.0  # Maximum spend per goal (EUR)
+APPROVAL_THRESHOLD = 45.0  # Human approval required above this amount (EUR)
+DAILY_BUDGET_LIMIT = 180.0  # Daily spending limit (EUR)
 ```
 
 #### **4.2 Quality Control Thresholds**

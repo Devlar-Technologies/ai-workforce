@@ -79,8 +79,8 @@ class WorkforceMetrics:
 
         # Cost metrics
         self.daily_cost = Gauge(
-            'workforce_daily_cost_usd',
-            'Daily cost in USD',
+            'workforce_daily_cost_eur',
+            'Daily cost in EUR',
             registry=self.registry
         )
 
