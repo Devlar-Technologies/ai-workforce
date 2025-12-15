@@ -21,7 +21,7 @@ from utils import setup_logging
 # Configure page
 st.set_page_config(
     page_title="Devlar AI Workforce",
-    page_icon="🤖",
+    page_icon="assets/images/ai-workforce-logo.png",  # Use actual logo
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -48,8 +48,18 @@ class StreamlitInterface:
 
     def render_header(self):
         """Render application header"""
-        st.title("🤖 Devlar AI Workforce")
-        st.markdown("*CEO Orchestrator Dashboard - Scale your business with AI*")
+        # Use actual logo instead of emoji
+        col1, col2 = st.columns([1, 4])
+
+        with col1:
+            try:
+                st.image("assets/images/ai-workforce-logo.png", width=120)
+            except:
+                st.title("🤖")  # Fallback to emoji if image fails
+
+        with col2:
+            st.title("Devlar AI Workforce")
+            st.markdown("*CEO Orchestrator Dashboard - Scale your business with AI*")
 
         col1, col2, col3, col4 = st.columns(4)
 
