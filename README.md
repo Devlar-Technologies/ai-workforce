@@ -1,7 +1,7 @@
 # AI Workforce
 
 <div align="center">
-  <img src="assets/images/ai-workforce-logo.png" alt="AI Workforce Logo" width="400" />
+  <img src="assets/images/ai-workforce-logo.png" alt="AI Workforce Logo" width="300" />
 </div>
 
 > **Production-Ready AI Workforce for Business Automation** - Scale your business with autonomous AI specialist pods
