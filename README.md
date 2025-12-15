@@ -2,6 +2,8 @@
 
 > **Production-Ready AI Workforce for Business Automation** - Scale your business with autonomous AI specialist pods
 
+**Built by [Devlar Technologies](https://devlar.io/products/ai-workforce) | [Learn More →](https://devlar.io/products/ai-workforce)**
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Modal.com](https://img.shields.io/badge/deploy-modal.com-green.svg)](https://modal.com)
