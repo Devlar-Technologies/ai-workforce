@@ -166,17 +166,10 @@ temp/
 # DEVLAR INTERNAL COMPANY DOCS - Not for public consumption
 # =============================================================================
 
-# Competitive analysis and strategy
-docs/competitive-positioning.md
+# Internal docs directory - contains strategy, competitive analysis, etc.
+docs/internal/
 
-# Customer onboarding workflows
-docs/customer-onboarding.md
-
-# Internal product planning
-docs/productization-plan.md
-docs/product-alignment-status.md
-
-# Business strategy documents
+# Alternative internal directories (if created elsewhere)
 strategy/
 internal/
 business-docs/
