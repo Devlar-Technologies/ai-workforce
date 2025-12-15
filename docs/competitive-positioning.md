@@ -78,7 +78,7 @@ While CrewAI Enterprise offers a powerful multi-agent framework, AI Workforce pr
 
 **"Unlike general-purpose frameworks that require months of development, AI Workforce provides business-ready specialists that execute goals immediately."**
 
-**"While enterprise platforms charge $99K+ annually with execution limits, AI Workforce offers transparent per-goal pricing starting at €45."**
+**"While enterprise platforms charge €90K-€110K annually with execution limits, AI Workforce offers transparent per-goal pricing starting at €45."**
 
 **"CrewAI is perfect for building custom agent systems. AI Workforce is perfect for getting business results today."**
 
@@ -104,6 +104,68 @@ Address common questions:
 - "How is this different from CrewAI Enterprise?"
 - "Do I need technical skills to use AI Workforce?"
 - "What's included vs what I need to build?"
+
+## AI Workforce Pricing Model Explained
+
+### **"€45/goal, €180/day"** Breakdown
+
+#### **€45 per Goal**
+- Pay **€45 each time** you give AI Workforce a business goal to execute
+- Examples of billable goals:
+  - "Research top 5 competitors in the fintech space" = €45
+  - "Create a marketing campaign for our new product" = €45
+  - "Generate 50 qualified leads for our B2B software" = €45
+  - "Analyze customer churn and recommend improvements" = €45
+
+#### **€180 Daily Maximum**
+- **Cost cap**: Never pay more than €180 in a single day
+- If you execute 4+ goals in one day (4 × €45 = €180), additional goals that day are **free**
+- Protects against runaway costs and provides predictable budgeting
+
+#### **Usage Examples**
+
+**Light Usage (1-2 goals/day):**
+- 1 goal = €45/day
+- 2 goals = €90/day
+- Monthly estimate: €1,350-€2,700
+
+**Heavy Usage (4+ goals/day):**
+- 4 goals = €180/day (hits daily cap)
+- 5 goals = €180/day (5th goal free)
+- 10 goals = €180/day (goals 5-10 free)
+- Monthly estimate: €5,400 (30 days × €180)
+
+#### **Why This Pricing Model?**
+
+**Business-Aligned Costs:**
+- Pay for results, not software licenses
+- Unlimited team members (no per-seat costs)
+- Scale usage as needed without subscription penalties
+
+**Predictable & Transparent:**
+- Know exactly what each business outcome costs
+- Daily cap prevents bill shock
+- No hidden fees or complex tier calculations
+
+**Compare to CrewAI Enterprise:**
+- **CrewAI**: €90K-€110K/year + per-seat costs + execution limits
+- **AI Workforce**: €45/goal with €180 daily max + unlimited users
+
+#### **Total Cost of Ownership Comparison**
+
+**CrewAI Enterprise (Annual):**
+- Base license: €90,000-€110,000
+- 10 seats @ €1,000/seat: €10,000
+- Development time (3 months): €30,000
+- **Total Year 1**: €130,000-€150,000
+
+**AI Workforce (Annual - Heavy Usage):**
+- Daily maximum usage: €180 × 365 days = €65,700
+- **Total Year 1**: €65,700 (56% cost savings)
+
+**AI Workforce (Annual - Moderate Usage):**
+- 2 goals/day average: €90 × 365 days = €32,850
+- **Total Year 1**: €32,850 (78% cost savings)
 
 ## Competitive Advantages Summary
 
