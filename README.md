@@ -253,7 +253,7 @@ DAILY_BUDGET_LIMIT = 180.0  # Daily spending cap (EUR)
 ### Contact
 - 📧 **Email**: support@devlar.io
 - 🌐 **Website**: [devlar.io](https://www.devlar.io)
-- 💬 **Discord**: [Join our community](https://discord.gg/devlar)
+- 💼 **LinkedIn**: [Devlar Technologies](https://linkedin.com/company/devlar-technologies)
 
 ## 📄 License
 

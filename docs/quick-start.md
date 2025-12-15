@@ -220,8 +220,7 @@ python -c "from memory import DevlarMemory; m = DevlarMemory(); print('Memory co
 
 **Need Support:**
 - 📧 Email: [support@devlar.io](mailto:support@devlar.io)
-- 💬 Discord: [Devlar AI Community](https://discord.gg/devlar-ai)
-- 📱 Telegram: [@DevlarSupport](https://t.me/DevlarSupport)
+- 🌐 Website: [devlar.io](https://www.devlar.io)
 
 ---
 
