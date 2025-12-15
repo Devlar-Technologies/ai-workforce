@@ -144,11 +144,11 @@ class StreamlitInterface:
 
             with col1:
                 priority = st.selectbox("Priority", ["High", "Medium", "Low"], index=1)
-                budget_limit = st.number_input("Budget Limit ($)", min_value=0.0, value=100.0, step=10.0)
+                budget_limit = st.number_input("Budget Limit (€)", min_value=0.0, value=100.0, step=10.0)
 
             with col2:
                 notification_level = st.selectbox("Notifications", ["All", "Important Only", "None"], index=1)
-                auto_approve = st.checkbox("Auto-approve operations under $50", value=True)
+                auto_approve = st.checkbox("Auto-approve operations under €50", value=True)
 
         # Execute button
         if st.button("🚀 Execute Goal", type="primary", disabled=not goal):

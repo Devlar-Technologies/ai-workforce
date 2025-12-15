@@ -157,7 +157,7 @@ class TelegramNotificationTool(BaseTool):
 **Details**:
 {self._format_details(details)}
 
-**Decision Required**: This operation exceeds the automatic approval threshold of $50.
+**Decision Required**: This operation exceeds the automatic approval threshold of €50.
 
 Please respond with:
 • ✅ `approve` to proceed

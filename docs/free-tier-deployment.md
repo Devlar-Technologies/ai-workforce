@@ -8,15 +8,15 @@ This configuration minimizes costs by leveraging generous free tiers:
 
 | Component | Free Tier Option | Monthly Limit | Cost After Limit |
 |-----------|------------------|---------------|-------------------|
-| **AI Models** | Anthropic Claude Sonnet | 1M tokens | $0.003/1K tokens |
-| **Vector DB** | Pinecone Serverless | 100K vectors | $0.20/1M vectors |
-| **Web Scraping** | Firecrawl | 500 pages | $1/1K pages |
-| **Hosting** | Modal.com | $30 credits | Pay per use |
-| **Database** | Supabase | 500MB | $25/month pro |
+| **AI Models** | Anthropic Claude Sonnet | 1M tokens | €0.003/1K tokens |
+| **Vector DB** | Pinecone Serverless | 100K vectors | €0.18/1M vectors |
+| **Web Scraping** | Firecrawl | 500 pages | €0.90/1K pages |
+| **Hosting** | Modal.com | €27 credits | Pay per use |
+| **Database** | Supabase | 500MB | €23/month pro |
 | **Monitoring** | Self-hosted | Free | Infrastructure only |
 | **Notifications** | Telegram Bot | Free | Free forever |
 
-**Total Free Usage:** ~$0/month for moderate usage (up to limits)
+**Total Free Usage:** ~€0/month for moderate usage (up to limits)
 
 ## Optimized Free Tier Configuration
 
@@ -25,7 +25,7 @@ This configuration minimizes costs by leveraging generous free tiers:
 ```bash
 # AI Models - Start with free tiers
 ANTHROPIC_API_KEY=your_anthropic_key_here  # Free tier: 1M tokens
-OPENAI_API_KEY=your_openai_key_here        # $5 credit on signup
+OPENAI_API_KEY=your_openai_key_here        # €5 credit on signup
 XAI_API_KEY=your_xai_grok_key_here         # Optional fallback
 
 # Vector Memory - Free tier
@@ -60,7 +60,7 @@ JWT_SECRET=generate_random_secret_here
 
 ### 2. Modal.com Free Deployment
 
-Modal.com offers $30 monthly credits - perfect for solo founders.
+Modal.com offers €27 monthly credits - perfect for solo founders.
 
 **Optimized modal_deploy.py:**
 
@@ -241,7 +241,7 @@ class FreeTierTracker:
             "anthropic_tokens": 1000000,    # 1M tokens
             "pinecone_vectors": 100000,     # 100K vectors
             "firecrawl_pages": 500,         # 500 pages
-            "modal_credits": 30.0           # $30 credits
+            "modal_credits": 27.0           # €27 credits
         }
         self.usage_file = "data/usage_tracking.json"
 
@@ -346,11 +346,11 @@ class ChromaDBMemory:
 ### AI Model Free Tiers
 
 1. **Anthropic Claude**
-   - $25 credit on signup
+   - €23 credit on signup
    - Most generous for testing
 
 2. **OpenAI GPT**
-   - $5 credit on signup
+   - €5 credit on signup
    - Good for development
 
 3. **Groq (Free)**
@@ -368,23 +368,23 @@ class ChromaDBMemory:
 
 **Light Usage (Solo Founder Testing):**
 - Executions: 20/month
-- Cost: $0/month (within free tiers)
+- Cost: €0/month (within free tiers)
 
 **Moderate Usage (Active Development):**
 - Executions: 100/month
-- Estimated cost: $5-10/month
+- Estimated cost: €5-9/month
 
 **Heavy Usage (Production):**
 - Executions: 500/month
-- Estimated cost: $50-75/month
+- Estimated cost: €45-68/month
 
 ### Scaling Beyond Free Tiers
 
 When you outgrow free tiers, prioritize upgrades:
 
-1. **First Priority**: Anthropic API ($3/month minimum)
-2. **Second Priority**: Modal.com credits ($30/month)
-3. **Third Priority**: Pinecone paid plan ($70/month)
+1. **First Priority**: Anthropic API (€3/month minimum)
+2. **Second Priority**: Modal.com credits (€27/month)
+3. **Third Priority**: Pinecone paid plan (€63/month)
 4. **Last Priority**: Premium monitoring tools
 
 ## Getting Started Checklist

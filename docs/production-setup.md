@@ -253,7 +253,7 @@ python -c "from utils.metrics import get_metrics; m = get_metrics(); print(f'Ena
 ### Week 1 Targets
 - [ ] 10+ successful goal executions
 - [ ] All 6 pods functioning correctly
-- [ ] Cost tracking under $100/week
+- [ ] Cost tracking under €90/week
 - [ ] 95%+ success rate (GREEN verdicts)
 
 ### Month 1 Targets

@@ -144,7 +144,7 @@ Improve user retention with better onboarding experience
 📊 Execution Results:
 ├── Status: Completed ✅ (GREEN verdict)
 ├── Execution Time: 2.3 minutes
-├── Cost: $8.50
+├── Cost: €7.70
 ├── Pods Used: Research → Marketing → Sales
 ├── Result: Comprehensive strategy document
 ├── Learning: Stored in vector memory for future use
@@ -155,7 +155,7 @@ Improve user retention with better onboarding experience
 
 ### Cost Controls
 The system includes built-in cost controls:
-- Automatic approval required for operations >$50
+- Automatic approval required for operations >€50
 - Real-time cost tracking
 - Budget alerts via Telegram
 

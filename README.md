@@ -144,7 +144,7 @@ Wave 4: Sales pod → Outreach sequences (depends on Wave 3)
 - **System Health** - Uptime, memory usage, external API status
 
 ### Automated Alerts
-- Budget threshold exceeded ($50+ requires approval)
+- Budget threshold exceeded (€50+ requires approval)
 - High failure rates or performance degradation
 - External API outages or rate limits
 - System resource constraints

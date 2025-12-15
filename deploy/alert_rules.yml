@@ -59,7 +59,7 @@ groups:
           category: cost
         annotations:
           summary: "Daily cost exceeds budget"
-          description: "Daily spend is ${{ $value }}, above $100 budget threshold."
+          description: "Daily spend is €{{ $value }}, above €90 budget threshold."
 
       - alert: APIUsageSpike
         expr: rate(workforce_api_requests_total[5m]) > 100
@@ -79,7 +79,7 @@ groups:
           category: cost
         annotations:
           summary: "CRITICAL: Daily cost exceeds emergency threshold"
-          description: "Daily spend is ${{ $value }}, above $200 emergency threshold. Immediate action required."
+          description: "Daily spend is €{{ $value }}, above €180 emergency threshold. Immediate action required."
 
   - name: external-dependencies
     interval: 60s

@@ -508,7 +508,7 @@ class AnalyticsPod(CrewBase):
         return {
             "conversion_improvement": "30-50% increase",
             "retention_improvement": "20% reduction in churn",
-            "revenue_impact": "$500K additional ARR",
+            "revenue_impact": "€450K additional ARR",
             "efficiency_gain": "40% reduction in CAC",
             "time_savings": "20 hours/week automated"
         }

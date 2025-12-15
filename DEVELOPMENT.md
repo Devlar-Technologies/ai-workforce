@@ -342,7 +342,7 @@ Devlar builds AI-first SaaS tools including:
 ### Technical Standards
 - **Wave-based execution**: Parallel + sequential task management
 - **Quality control**: GREEN/RED/YELLOW verdicts with retry logic
-- **Human-in-the-loop**: Approval for high-cost operations (>$50)
+- **Human-in-the-loop**: Approval for high-cost operations (>€50)
 - **Comprehensive logging**: Structured logging with Loguru
 - **Error handling**: Graceful degradation and recovery
 

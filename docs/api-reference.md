@@ -304,7 +304,7 @@ POST /api/tools/firecrawl/scrape
             },
             {
                 "name": "Personal Pro",
-                "price": "$4/month",
+                "price": "€4/month",
                 "features": ["Unlimited file uploads", "Version history"]
             }
         ]
@@ -820,7 +820,7 @@ ws.onmessage = function(event) {
 result = ceo.execute_goal(
     goal="Complex market research task",
     budget_limit=50.0,  # Reasonable for research
-    auto_approve=True   # For operations under $50
+    auto_approve=True   # For operations under €50
 )
 ```
 

@@ -355,7 +355,7 @@ class DevlarCEO:
 
 **Goal:** {goal}
 **Execution ID:** {execution_id}
-**Estimated Cost:** > $50
+**Estimated Cost:** > €50
 
 Do you approve this execution?
 Reply with: `approve {execution_id}` or `deny {execution_id}`

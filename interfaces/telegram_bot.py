@@ -154,7 +154,7 @@ Ready to scale your business? 🚀
 • `Create performance monitoring dashboard`
 
 **Approval System:**
-Operations over $50 require approval. You'll receive notifications with:
+Operations over €50 require approval. You'll receive notifications with:
 • ✅ Approve - Proceed with operation
 • ❌ Deny - Cancel operation
 • 📋 Details - Get more information

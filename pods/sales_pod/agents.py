@@ -96,7 +96,7 @@ class SalesPod(CrewBase):
             role="Sales Strategy Architect",
             goal="Design and optimize sales processes that predictably generate revenue",
             backstory="""You're a sales operations expert who has built and scaled sales teams from
-            0 to $10M+ ARR. You understand sales methodology (MEDDIC, Challenger, SPIN), pipeline
+            0 to €9M+ ARR. You understand sales methodology (MEDDIC, Challenger, SPIN), pipeline
             management, and how to create repeatable sales processes. You can design compensation
             plans, territories, and quotas that drive performance. You know what metrics matter.""",
             tools=[self.firecrawl],
@@ -384,7 +384,7 @@ class SalesPod(CrewBase):
                 4. Design metrics and KPIs
                 5. Create playbooks
 
-                Deal size: {context.get('deal_size', '$10-50K')}
+                Deal size: {context.get('deal_size', '€9-45K')}
                 Sales cycle: {context.get('sales_cycle', '30-60 days')}
                 """,
                 expected_output="Sales process documentation",
@@ -467,8 +467,8 @@ class SalesPod(CrewBase):
             "total_leads": lead_count,
             "expected_meetings": int(lead_count * 0.15),  # 15% meeting rate
             "expected_opportunities": int(lead_count * 0.05),  # 5% opp rate
-            "pipeline_value": lead_count * 0.05 * 25000,  # Average deal size $25K
-            "expected_revenue": lead_count * 0.05 * 25000 * 0.2  # 20% close rate
+            "pipeline_value": lead_count * 0.05 * 22500,  # Average deal size €22.5K
+            "expected_revenue": lead_count * 0.05 * 22500 * 0.2  # 20% close rate
         }
 
     def _generate_training_plan(self, sales_motion: str) -> List[str]:

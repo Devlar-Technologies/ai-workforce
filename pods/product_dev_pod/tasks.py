@@ -473,20 +473,20 @@ class ProductDevTasks:
         # Estimate API costs based on task type
         if "ai_integration" in task_name:
             cost_estimate["api_calls_estimated"] = 100  # AI development testing
-            cost_estimate["estimated_ai_cost"] = "$5-15"
+            cost_estimate["estimated_ai_cost"] = "€5-14"
 
         elif "chrome_extension" in task_name:
             cost_estimate["api_calls_estimated"] = 50   # Web scraping for testing
-            cost_estimate["estimated_web_cost"] = "$2-5"
+            cost_estimate["estimated_web_cost"] = "€2-5"
 
         else:
             cost_estimate["api_calls_estimated"] = 30   # Basic testing
-            cost_estimate["estimated_cost"] = "$1-3"
+            cost_estimate["estimated_cost"] = "€1-3"
 
         # Factor in complexity
         complexity_multiplier = len(parameters.get("features", [])) * 0.2 + 1.0
         cost_estimate["time_minutes"] = int(cost_estimate["time_minutes"] * complexity_multiplier)
 
-        cost_estimate["human_approval_required"] = cost_estimate.get("estimated_cost", "$1").replace("$", "").split("-")[1] > "10"
+        cost_estimate["human_approval_required"] = cost_estimate.get("estimated_cost", "€1").replace("€", "").split("-")[1] > "10"
 
         return cost_estimate
