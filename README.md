@@ -1,5 +1,9 @@
 # AI Workforce
 
+<div align="center">
+  <img src="assets/images/ai-workforce-logo.png" alt="AI Workforce Logo" width="400" />
+</div>
+
 > **Production-Ready AI Workforce for Business Automation** - Scale your business with autonomous AI specialist pods
 
 **Built by [Devlar Technologies](https://github.com/Devlar-Technologies) | [Learn More →](https://devlar.io/products/ai-workforce)**
