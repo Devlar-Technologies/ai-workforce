@@ -114,6 +114,66 @@ if echo "$STAGED_FILES" | grep '\.(yml|yaml)$' > /dev/null; then
     echo -e "${GREEN}✅ YAML syntax checks passed${NC}"
 fi
 
+# Check for emojis in public-facing documentation
+echo -e "${BLUE}🚫 Checking for emojis in public-facing documentation...${NC}"
+
+# Emoji pattern - matches most common emoji ranges
+EMOJI_PATTERN='[\x{1F600}-\x{1F64F}]|[\x{1F300}-\x{1F5FF}]|[\x{1F680}-\x{1F6FF}]|[\x{1F1E0}-\x{1F1FF}]|[\x{2600}-\x{26FF}]|[\x{2700}-\x{27BF}]'
+
+EMOJI_FOUND=false
+AFFECTED_FILES=()
+
+for file in $STAGED_FILES; do
+    # Skip if file doesn't exist
+    if [[ ! -f "$file" ]]; then
+        continue
+    fi
+
+    # Check if file is public documentation
+    IS_PUBLIC_DOC=false
+
+    # Check exact matches
+    if [[ "$file" == "README.md" ]] || [[ "$file" == "DEVELOPMENT.md" ]] || [[ "$file" == "architecture.md" ]]; then
+        IS_PUBLIC_DOC=true
+    fi
+
+    # Check docs directory (exclude internal docs)
+    if [[ "$file" =~ ^docs/.*\.md$ ]] && [[ ! "$file" =~ ^docs/internal/ ]]; then
+        IS_PUBLIC_DOC=true
+    fi
+
+    if [[ "$IS_PUBLIC_DOC" == true ]]; then
+        # Check for emojis using perl regex
+        if ! perl -ne "exit 1 if /$EMOJI_PATTERN/u" "$file" 2>/dev/null; then
+            EMOJI_FOUND=true
+            AFFECTED_FILES+=("$file")
+        fi
+    fi
+done
+
+if [[ "$EMOJI_FOUND" == true ]]; then
+    echo -e "${RED}❌ COMMIT REJECTED: Emojis found in public-facing documentation!${NC}"
+    echo -e "${YELLOW}📝 Public-facing documentation must be professional and emoji-free.${NC}"
+    echo -e "${YELLOW}Files with emojis:${NC}"
+
+    for file in "${AFFECTED_FILES[@]}"; do
+        echo -e "${YELLOW}  • $file${NC}"
+        # Show specific lines with emojis
+        perl -ne "print \"    Line $.: $_\" if /$EMOJI_PATTERN/u" "$file" 2>/dev/null || true
+    done
+
+    echo ""
+    echo -e "${GREEN}💡 Fix by replacing emojis with:${NC}"
+    echo "  • Descriptive text"
+    echo "  • Bold/italic formatting"
+    echo "  • Status badges"
+    echo ""
+    echo -e "${GREEN}ℹ️  Note: Internal docs (docs/internal/) are exempt${NC}"
+    exit 1
+fi
+
+echo -e "${GREEN}✅ No emojis found in public-facing documentation${NC}"
+
 # Check for secrets in staged files
 echo -e "${BLUE}🔒 Checking for secrets...${NC}"
 
