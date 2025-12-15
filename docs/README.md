@@ -4,37 +4,37 @@ This directory contains comprehensive documentation for the AI Workforce system 
 
 ## Documentation Structure
 
-### 📚 **Core Documentation**
+### **Core Documentation**
 - [**Quick Start Guide**](./quick-start.md) - Get up and running in minutes
 - [**Architecture Overview**](./architecture.md) - System design and components
 - [**API Reference**](./api-reference.md) - Complete API documentation
 - [**Configuration Guide**](./configuration.md) - Environment setup and configuration
 
-### 🏗️ **System Components**
+### **System Components**
 - [**CEO Orchestrator**](./components/ceo-orchestrator.md) - Hierarchical task delegation
 - [**Specialist Pods**](./components/pods/) - Agent pod documentation
 - [**Memory System**](./components/memory.md) - Pinecone vector memory
 - [**Tools & Integrations**](./components/tools.md) - API tools and integrations
 
-### 🚀 **Deployment & Operations**
+### **Deployment & Operations**
 - [**Local Development**](./deployment/local-setup.md) - Development environment setup
 - [**Modal.com Deployment**](./deployment/modal-deployment.md) - Serverless deployment
 - [**Docker Deployment**](./deployment/docker.md) - Container deployment
 - [**Monitoring & Logging**](./deployment/monitoring.md) - System observability
 
-### 🎯 **Examples & Tutorials**
+### **Examples & Tutorials**
 - [**Example Workflows**](./examples/) - Complete workflow examples
 - [**Telegram Bot Usage**](./tutorials/telegram-bot.md) - Bot interface guide
 - [**Custom Tool Creation**](./tutorials/custom-tools.md) - Building new tools
 - [**Workflow Customization**](./tutorials/workflows.md) - Custom workflow design
 
-### 🔧 **Development**
+### **Development**
 - [**Contributing Guide**](./contributing.md) - How to contribute to the project
 - [**Development Setup**](./development/setup.md) - Developer environment
 - [**Testing Guide**](./development/testing.md) - Testing strategies and tools
 - [**Code Standards**](./development/standards.md) - Coding conventions
 
-### 📋 **Reference**
+### **Reference**
 - [**Environment Variables**](./reference/environment.md) - Complete env var reference
 - [**Error Codes**](./reference/error-codes.md) - Error handling and codes
 - [**Performance Tuning**](./reference/performance.md) - Optimization guidelines

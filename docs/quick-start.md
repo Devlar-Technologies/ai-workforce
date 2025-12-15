@@ -8,7 +8,7 @@ Get your AI Workforce up and running in under 15 minutes.
 - Git
 - API keys for required services (see setup guide below)
 
-## 🚀 Installation
+## Installation
 
 ### 1. Clone and Setup
 
@@ -30,7 +30,7 @@ python examples/execute_goal.py
 
 This will run in simulation mode to test the system without API keys.
 
-## 🌐 Production Deployment
+## Production Deployment
 
 ### 1. Modal.com Setup
 
@@ -74,7 +74,7 @@ TELEGRAM_BOT_TOKEN=your_telegram_token
 python examples/execute_goal.py
 ```
 
-## 🎯 First Execution
+## First Execution
 
 ### Option A: Direct Execution (Easiest)
 
@@ -97,7 +97,7 @@ python examples/execute_goal.py
 modal run deploy/modal_deploy.py::test_execution
 ```
 
-## 📋 Example Goals
+## Example Goals
 
 Try these example goals to see the system in action:
 
@@ -131,7 +131,7 @@ Improve user retention with better onboarding experience
 ```
 **Expected Output:** Customer Success Pod → Retention analysis, onboarding optimization
 
-## 🔍 Understanding Results
+## Understanding Results
 
 ### Execution Flow
 1. **CEO Orchestrator** - Goal decomposition and pod selection
@@ -141,8 +141,8 @@ Improve user retention with better onboarding experience
 
 ### Result Format
 ```
-📊 Execution Results:
-├── Status: Completed ✅ (GREEN verdict)
+Execution Results:
+├── Status: Completed (GREEN verdict)
 ├── Execution Time: 2.3 minutes
 ├── Cost: €7.70
 ├── Pods Used: Research → Marketing → Sales
@@ -151,7 +151,7 @@ Improve user retention with better onboarding experience
 └── Verdict: GREEN (High quality, no retry needed)
 ```
 
-## 🛠️ Basic Configuration
+## Basic Configuration
 
 ### Cost Controls
 The system includes built-in cost controls:
@@ -175,7 +175,7 @@ LOG_LEVEL=INFO  # DEBUG, INFO, WARNING, ERROR
 tail -f logs/devlar-workforce.log
 ```
 
-## 🔧 Common Issues
+## Common Issues
 
 ### API Key Issues
 ```bash
@@ -194,7 +194,7 @@ python -c "from memory import DevlarMemory; m = DevlarMemory(); print('Memory co
 2. Check bot is added to your chat
 3. Ensure bot has appropriate permissions
 
-## 📚 Next Steps
+## Next Steps
 
 ### Learning More
 - [Architecture Overview](./architecture.md) - Understand how it works
@@ -211,7 +211,7 @@ python -c "from memory import DevlarMemory; m = DevlarMemory(); print('Memory co
 - [Docker Deployment](./deployment/docker.md) - Container deployment
 - [Monitoring Setup](./deployment/monitoring.md) - Production monitoring
 
-## 🆘 Getting Help
+## Getting Help
 
 **Quick Help:**
 - Check [Troubleshooting Guide](./reference/troubleshooting.md)
@@ -219,9 +219,9 @@ python -c "from memory import DevlarMemory; m = DevlarMemory(); print('Memory co
 - Search [GitHub Issues](https://github.com/Devlar-Technologies/ai-workforce/issues)
 
 **Need Support:**
-- 📧 Email: [support@devlar.io](mailto:support@devlar.io)
-- 🌐 Website: [devlar.io](https://www.devlar.io)
+- Email: [support@devlar.io](mailto:support@devlar.io)
+- Website: [devlar.io](https://www.devlar.io)
 
 ---
 
-🎉 **You're ready to build your AI workforce!** Start with simple goals and gradually explore more complex workflows.
+**You're ready to build your AI workforce!** Start with simple goals and gradually explore more complex workflows.

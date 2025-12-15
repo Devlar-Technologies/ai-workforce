@@ -2,11 +2,11 @@
 
 Complete guide for deploying and configuring the Devlar AI Workforce in production.
 
-## 🎯 Overview
+## Overview
 
 This guide covers all manual setup tasks required after the development work is complete. The AI workforce system is now fully built and tested - these steps will get it running in your production environment.
 
-## 📋 Setup Checklist
+## Setup Checklist
 
 ### **Phase 1: Core Infrastructure Setup**
 
@@ -189,7 +189,7 @@ Start with these proven goal types:
 "Research feature requests from customer feedback"
 ```
 
-## ⚡ Quick Start Commands
+## Quick Start Commands
 
 ### Deploy Everything
 ```bash
@@ -218,7 +218,7 @@ python -c "from utils.metrics import get_cost_tracker; print(f'Daily cost: ${get
 modal app logs devlar-workforce --follow
 ```
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -248,7 +248,7 @@ python -c "from pods.research_pod.agents import execute_pod_goal; print(execute_
 python -c "from utils.metrics import get_metrics; m = get_metrics(); print(f'Enabled: {m.enabled}')"
 ```
 
-## 📊 Success Metrics
+## Success Metrics
 
 ### Week 1 Targets
 - [ ] 10+ successful goal executions
@@ -269,7 +269,7 @@ python -c "from utils.metrics import get_metrics; m = get_metrics(); print(f'Ena
 - **Memory Utilization**: Growing experience database
 - **Business Value**: Measurable impact on productivity
 
-## 🔒 Security Considerations
+## Security Considerations
 
 ### API Key Management
 - Store all keys in Modal secrets (never in code)
@@ -289,7 +289,7 @@ python -c "from utils.metrics import get_metrics; m = get_metrics(); print(f'Ena
 - Regular cleanup of old experiences
 - Secure communication channels
 
-## 📞 Support & Maintenance
+## Support & Maintenance
 
 ### Daily Checks
 - Review execution logs for errors
