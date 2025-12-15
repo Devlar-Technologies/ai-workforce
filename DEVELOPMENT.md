@@ -84,6 +84,14 @@ python tests/run_tests.py --integration
 - **Documentation**: Code changes must include doc updates
 
 ### Git Workflow
+
+**First-time setup:**
+```bash
+# Configure git hooks (one-time setup)
+bash scripts/setup-git-hooks.sh
+```
+
+**Development workflow:**
 ```bash
 # Work on qc branch
 git checkout qc
@@ -94,6 +102,35 @@ git commit -m "descriptive message"
 
 # Use push workflow script
 bash scripts/push-workflow.sh
+```
+
+### Git Hooks & Quality Gates
+
+The project includes pre-commit hooks that enforce quality standards:
+
+**Automated Checks:**
+- **No emojis in public documentation** - Prevents emojis in README.md, docs/*.md (except docs/internal/)
+- **Documentation updates required** - Code changes must include doc updates
+- **Secret detection** - Prevents API keys and tokens from being committed
+- **Syntax validation** - Python and YAML files are checked for syntax errors
+- **Branch enforcement** - Development must happen on `qc` branch
+
+**Hook Setup:**
+```bash
+# Enable hooks (run once)
+bash scripts/setup-git-hooks.sh
+
+# Test the emoji detection
+echo "# Test 🚀" > test.md
+git add test.md
+git commit -m "test: emoji detection"  # This will be rejected
+rm test.md
+```
+
+**Bypassing Hooks (Emergency Only):**
+```bash
+# Skip hooks (use sparingly)
+git commit --no-verify -m "emergency fix"
 ```
 
 ### Adding New Pods

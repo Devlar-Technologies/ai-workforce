@@ -81,6 +81,10 @@ modal deploy deploy/modal_deploy.py
 git clone https://github.com/Devlar-Technologies/ai-workforce.git
 cd ai-workforce
 pip install -r requirements.txt
+
+# Setup development environment (includes git hooks)
+bash scripts/setup-git-hooks.sh
+
 python examples/execute_goal.py
 ```
 **[Development Guide](DEVELOPMENT.md)**
