@@ -167,19 +167,24 @@ python tests/run_tests.py --integration
 
 ## 🔧 Configuration
 
-### Environment Variables
+### Required Integrations
 ```bash
-# Required API Keys (store in Modal secrets)
-OPENAI_API_KEY=your_key
-ANTHROPIC_API_KEY=your_key
-PINECONE_API_KEY=your_key
-GITHUB_TOKEN=your_token
-APOLLO_API_KEY=your_key
-FIRECRAWL_API_KEY=your_key
-INSTANTLY_API_KEY=your_key
-REPLICATE_API_TOKEN=your_token
-TELEGRAM_BOT_TOKEN=your_token
+# ⚠️ REQUIRED - Core AI Services (must have for basic operation)
+OPENAI_API_KEY=your_key        # Primary LLM processing
+ANTHROPIC_API_KEY=your_key     # Claude model access
+PINECONE_API_KEY=your_key      # Vector memory system
+
+# ✨ OPTIONAL - Enhanced Features (add based on your needs)
+GITHUB_TOKEN=your_token        # Repository analysis and code insights
+APOLLO_API_KEY=your_key        # B2B lead generation and research
+FIRECRAWL_API_KEY=your_key     # Advanced web scraping and content analysis
+INSTANTLY_API_KEY=your_key      # Email automation and outreach campaigns
+REPLICATE_API_TOKEN=your_token # AI-powered image generation (Flux)
+TELEGRAM_BOT_TOKEN=your_token  # Real-time chat interface
+FAL_API_KEY=your_key           # Alternative image generation via fal.ai
 ```
+
+**Note**: Store all API keys securely in Modal secrets or your deployment platform's secrets management system.
 
 ### Budget Controls
 ```python
