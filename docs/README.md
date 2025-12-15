@@ -61,8 +61,8 @@ This directory contains comprehensive documentation for the AI Workforce system 
 
 ## Getting Help
 
-- **Issues**: Report bugs and feature requests on [GitHub Issues](https://github.com/alanomeara1/ai-workforce/issues)
-- **Discussions**: Join the conversation on [GitHub Discussions](https://github.com/alanomeara1/ai-workforce/discussions)
+- **Issues**: Report bugs and feature requests on [GitHub Issues](https://github.com/Devlar-Technologies/ai-workforce/issues)
+- **Discussions**: Join the conversation on [GitHub Discussions](https://github.com/Devlar-Technologies/ai-workforce/discussions)
 - **Support**: See [devlar.io/support](https://www.devlar.io/support) for product support
 
 ## License

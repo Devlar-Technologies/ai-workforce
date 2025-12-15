@@ -55,9 +55,9 @@ monitoring = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/alanomeara1/ai-workforce"
-Repository = "https://github.com/alanomeara1/ai-workforce"
-Documentation = "https://github.com/alanomeara1/ai-workforce"
+Homepage = "https://github.com/Devlar-Technologies/ai-workforce"
+Repository = "https://github.com/Devlar-Technologies/ai-workforce"
+Documentation = "https://github.com/Devlar-Technologies/ai-workforce"
 
 [tool.setuptools]
 packages = ["agents"]

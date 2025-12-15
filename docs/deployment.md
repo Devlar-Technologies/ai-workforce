@@ -63,7 +63,7 @@ GRAFANA_PASSWORD=admin_password
 
 ```bash
 # Clone and setup
-git clone https://github.com/alanomeara1/ai-workforce.git
+git clone https://github.com/Devlar-Technologies/ai-workforce.git
 cd ai-workforce
 
 # Setup environment

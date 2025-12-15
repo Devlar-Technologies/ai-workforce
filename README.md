@@ -66,7 +66,7 @@
 ### Option 1: Production Deployment (Recommended)
 ```bash
 # Production setup with Modal.com
-git clone https://github.com/alanomeara1/ai-workforce.git
+git clone https://github.com/Devlar-Technologies/ai-workforce.git
 cd ai-workforce
 pip install -r requirements.txt
 modal deploy deploy/modal_deploy.py
@@ -78,7 +78,7 @@ modal deploy deploy/modal_deploy.py
 ### Option 2: Local Development
 ```bash
 # Local testing and development
-git clone https://github.com/alanomeara1/ai-workforce.git
+git clone https://github.com/Devlar-Technologies/ai-workforce.git
 cd ai-workforce
 pip install -r requirements.txt
 python examples/execute_goal.py

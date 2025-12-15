@@ -29,7 +29,7 @@ class GitHubManagementTool(BaseTool):
     def __init__(self):
         super().__init__()
         self.github_token = os.getenv("GITHUB_TOKEN")
-        self.github_username = os.getenv("GITHUB_USERNAME", "alanomeara1")
+        self.github_username = os.getenv("GITHUB_USERNAME", "devlar-technologies")
         self.github_org = os.getenv("GITHUB_ORGANIZATION", "devlar-io")
 
         if not self.github_token:

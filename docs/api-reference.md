@@ -340,7 +340,7 @@ POST /api/tools/github/create-pr
 
 ```json
 {
-    "repository": "alanomeara1/chromentum",
+    "repository": "devlar-technologies/ai-workforce",
     "title": "Add dark mode toggle feature",
     "description": "Implements dark mode with user preference persistence",
     "source_branch": "feature/dark-mode",

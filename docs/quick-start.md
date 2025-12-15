@@ -14,7 +14,7 @@ Get your AI Workforce up and running in under 15 minutes.
 
 ```bash
 # Clone the repository
-git clone https://github.com/alanomeara1/ai-workforce.git
+git clone https://github.com/Devlar-Technologies/ai-workforce.git
 cd ai-workforce
 
 # Install dependencies
@@ -216,7 +216,7 @@ python -c "from memory import DevlarMemory; m = DevlarMemory(); print('Memory co
 **Quick Help:**
 - Check [Troubleshooting Guide](./reference/troubleshooting.md)
 - Review [Error Codes](./reference/error-codes.md)
-- Search [GitHub Issues](https://github.com/alanomeara1/devlar-ai-workforce/issues)
+- Search [GitHub Issues](https://github.com/Devlar-Technologies/ai-workforce/issues)
 
 **Need Support:**
 - 📧 Email: [support@devlar.io](mailto:support@devlar.io)

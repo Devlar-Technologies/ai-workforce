@@ -19,7 +19,7 @@ AI Workforce has been aligned as a standalone product that ANY company can use, 
 - **Product Name**: AI Workforce (standalone product)
 - **Company Credit**: "A product of Devlar Technologies" in footer/about sections
 - **Support**: Links to devlar.io for support and information
-- **Repository**: github.com/alanomeara1/ai-workforce
+- **Repository**: github.com/Devlar-Technologies/ai-workforce
 
 ## Remaining Code Updates Needed
 

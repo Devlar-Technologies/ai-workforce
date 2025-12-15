@@ -28,7 +28,7 @@ modal token new
 
 ### Installation
 ```bash
-git clone https://github.com/alanomeara1/ai-workforce.git
+git clone https://github.com/Devlar-Technologies/ai-workforce.git
 cd ai-workforce
 pip install -r requirements.txt
 ```

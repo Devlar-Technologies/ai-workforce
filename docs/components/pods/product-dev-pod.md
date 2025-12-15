@@ -250,7 +250,7 @@ Each wave execution is validated against predefined success criteria:
 ```bash
 # GitHub Integration
 GITHUB_TOKEN=your-github-token
-GITHUB_USERNAME=alanomeara1
+GITHUB_USERNAME=devlar-technologies
 GITHUB_ORGANIZATION=devlar-io
 
 # Deployment
