@@ -35,12 +35,18 @@
 5. **Customer Success Pod** - Onboarding flows, retention strategies, support
 6. **Analytics Pod** - Performance analysis, growth modeling, optimization
 
-### Integrated Tool Ecosystem
+### Core AI & Memory (Required)
+
+- **🧠 OpenAI** - Primary LLM processing and embeddings
+- **🤖 Anthropic Claude** - Advanced reasoning and analysis
+- **📦 Pinecone** - Vector memory for continuous learning
+
+### Enhanced Tools (Optional)
 
 - **🌐 Firecrawl** - Advanced web scraping and content analysis
 - **📊 GitHub** - Repository analysis and code insights
 - **👥 Apollo.io** - B2B lead generation and research
-- **🎨 Flux** - AI-powered image generation
+- **🎨 Flux** - AI-powered image generation via fal.ai
 - **💬 Telegram** - Real-time chat interface
 - **📧 Instantly.ai** - Email automation and outreach campaigns
 
